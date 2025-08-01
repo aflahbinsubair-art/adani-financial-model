@@ -3,10 +3,15 @@ This project provides a comprehensive, end-to-end financial valuation of Adani E
 
 ✨ Key Features
 Automated Data Collection: Fetches real-time stock data directly from Yahoo Finance.
+
 Revenue Forecasting: Utilizes an ARIMA time-series model to forecast future revenue.
+
 Core Valuation: Implements a two-stage Discounted Cash Flow (DCF) model to calculate intrinsic value.
+
 Risk Simulation: Performs a Monte Carlo simulation to model valuation uncertainty and provide a range of potential outcomes.
+
 Visual Analysis: Includes data visualizations to make complex results easy to understand.
+
 📊 Model Walkthrough
 The analysis is broken down into four key steps within the Jupyter Notebook:
 
@@ -14,7 +19,7 @@ Data Collection 📥
 
 We start by fetching historical stock prices for ADANIENT.NS using the yfinance library.
 
-Crucially, we load historical financial data (like revenue) from the adani_ent.xlsx file, which is located in this repository.
+The notebook is designed to load historical financial data (specifically a column named 'Revenue') from an Excel file named adani_ent.xlsx. You will need to provide this file yourself with the necessary historical data.
 
 ARIMA Revenue Forecasting 🔮
 
@@ -50,8 +55,17 @@ Each simulation generates a new valuation, and the results are plotted in a hist
 
 📦 Repository Files
 adani_arima_dcf_montecarlo_valuation.ipynb: The main notebook containing the full analysis.
+
+ADANIENT_stock.csv: The generated CSV file with historical stock prices.
+
 ▶️ How to Run the Notebook
 To explore this valuation model yourself, you'll need a Python environment with the following libraries.
+
+Prepare the Dataset:
+
+Create an Excel file named adani_ent.xlsx containing historical financial data. The notebook specifically requires a column named Revenue.
+
+Place this file in the same directory as the Jupyter Notebook.
 
 Clone the repository:
 
@@ -68,6 +82,3 @@ jupyter notebook adani_arima_dcf_montecarlo_valuation.ipynb
 
 ⚠️ Disclaimer
 This financial model is provided for educational and demonstrative purposes only. It is based on a simplified set of assumptions and should not be considered investment advice. The values and forecasts are hypothetical and do not represent a definitive valuation of Adani Enterprises.
-adani_ent.xlsx: The source Excel file with historical financial data.
-
-ADANIENT_stock.csv: The generated CSV file with historical stock prices.
